@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>おなかスコア</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>おなかスコア</h1>
+        <div class="form-group">
+            <label for="height">身長 (cm):</label>
+            <input type="number" id="height" placeholder="身長をcmで入力">
+        </div>
+        <div class="form-group">
+            <label for="weight">体重 (kg):</label>
+            <input type="number" id="weight" placeholder="体重をkgで入力">
+        </div>
+        <div class="form-group">
+            <label for="wc">ウエスト (cm):</label>
+            <input type="number" id="wc" placeholder="ウエスト周囲径をcmで入力">
+        </div>
+        <button onclick="calculateMetrics()">計算する</button>
+        <div id="results" style="display: none;">
+            <p id="bmi">BMI：</p>
+            <div id="bmiBar" class="indicator-bar"></div>
+            <p class="description">Body Mass Index; 体重と身長から計算され、肥満やるいそうを評価するための国際的な基準です。</p>
+            <p class="source">Keys A, Fidanza F, Karvonen MJ, Kimura N, Taylor HL. Indices of relative weight and obesity. Journal of Chronic Diseases. 1972;25(6):329-43.</p>
+            <p id="absi">ABSI：</p>
+            <div id="absiBar" class="indicator-bar"></div>
+            <p class="description">A Body Shape Index; ウエストサイズを加味した健康リスクの指標です。</p>
+            <p class="source">Krakauer NY, Krakauer JC. A new body shape index predicts mortality hazard independently of body mass index. PLoS ONE. 2012;7(7):e39504.</p>
+            <p id="bri">BRI：</p>
+            <div id="briBar" class="indicator-bar"></div>
+            <p class="description">Body Roundness Index; 身体の丸みを示す指標で、健康リスクを評価するために用います。</p>
+            <p class="source">Thomas DM, Bredlau C, Bosy-Westphal A, et al. Relationships between body roundness with body fat and visceral adipose tissue emerging from a new geometrical model. Obesity. 2013;21(11):2264-71."</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
